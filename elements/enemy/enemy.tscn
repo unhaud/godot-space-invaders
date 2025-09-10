@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo66i2jcbgr3o"]
+
+[ext_resource type="Texture2D" uid="uid://bnwbe1a5eclfm" path="res://assets/godot-invader-small.png" id="1_ttpur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4vrh"]
+atlas = ExtResource("1_ttpur")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek21h"]
+atlas = ExtResource("1_ttpur")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cx0d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4vrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek21h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjsli"]
+radius = 8.0
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1cx0d")
+autoplay = "default"
+frame_progress = 0.461363
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vjsli")
