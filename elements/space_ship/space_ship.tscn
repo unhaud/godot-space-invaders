@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://8mh26upbroo3"]
+
+[ext_resource type="Texture2D" uid="uid://y4a7ba2s0vfm" path="res://assets/space_ship.png" id="1_0s27b"]
+[ext_resource type="Script" uid="uid://kndmtg1fxk14" path="res://elements/space_ship/space_ship.gd" id="1_yhe4x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i5ro7"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3f31"]
+size = Vector2(10, 6)
+
+[node name="SpaceShip" type="CharacterBody2D"]
+script = ExtResource("1_yhe4x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0s27b")
+
+[node name="CollisionHull" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_i5ro7")
+
+[node name="CollisionRWing" type="CollisionShape2D" parent="."]
+position = Vector2(10, 3)
+shape = SubResource("RectangleShape2D_f3f31")
+
+[node name="CollisionLWing" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 3)
+shape = SubResource("RectangleShape2D_f3f31")
