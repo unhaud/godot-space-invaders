@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8mh26upbroo3" path="res://elements/space_ship/space_ship.tscn" id="2_7raqb"]
 [ext_resource type="PackedScene" uid="uid://sas78pds5ann" path="res://elements/wall/wall.tscn" id="3_jcm6v"]
-[ext_resource type="PackedScene" uid="uid://bo66i2jcbgr3o" path="res://elements/enemy/enemy.tscn" id="4_fwxkx"]
+[ext_resource type="PackedScene" uid="uid://bjtif5wgd3eyn" path="res://elements/enemy_group/enemy_group.tscn" id="4_fwxkx"]
 [ext_resource type="Texture2D" uid="uid://m7wn736d6450" path="res://assets/Space_Stars2.png" id="4_jcm6v"]
 
 [node name="Game" type="Node2D"]
@@ -23,5 +23,5 @@ position = Vector2(123, 209)
 [node name="Wall2" parent="." instance=ExtResource("3_jcm6v")]
 position = Vector2(256, 0)
 
-[node name="Enemy" parent="." instance=ExtResource("4_fwxkx")]
-position = Vector2(122, 43)
+[node name="EnemyGroup" parent="." instance=ExtResource("4_fwxkx")]
+position = Vector2(27, -14)

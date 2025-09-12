@@ -24,6 +24,12 @@ window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[layer_names]
+
+2d_physics/layer_1="enviorment"
+2d_physics/layer_2="space_ship"
+2d_physics/layer_3="enemy"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=3

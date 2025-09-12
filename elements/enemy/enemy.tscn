@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo66i2jcbgr3o"]
+[gd_scene load_steps=7 format=3 uid="uid://bo66i2jcbgr3o"]
 
+[ext_resource type="Script" uid="uid://5dlpus2h32f6" path="res://elements/enemy/enemy.gd" id="1_j4vrh"]
 [ext_resource type="Texture2D" uid="uid://bnwbe1a5eclfm" path="res://assets/godot-invader-small.png" id="1_ttpur"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j4vrh"]
@@ -28,6 +29,9 @@ animations = [{
 radius = 8.0
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_j4vrh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1cx0d")
@@ -36,3 +40,9 @@ frame_progress = 0.461363
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vjsli")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-15, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(15, 0)
