@@ -46,3 +46,4 @@ position = Vector2(165, 20)
 
 [node name="BlockTimer" type="Timer" parent="."]
 wait_time = 0.2
+one_shot = true
