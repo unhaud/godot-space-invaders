@@ -15,3 +15,7 @@ func shot():
 	var rocket = ROCKET_SCENE.instantiate()
 	rocket.global_position = global_position + Vector2(0, -30)
 	add_child(rocket)
+
+func take_damage():
+	print("print_damage")
+	pass
