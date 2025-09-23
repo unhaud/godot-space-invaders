@@ -17,5 +17,4 @@ func shot():
 	add_child(rocket)
 
 func take_damage():
-	print("print_damage")
-	pass
+	Globals.change_lives(-1)
