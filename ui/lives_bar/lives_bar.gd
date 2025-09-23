@@ -9,6 +9,8 @@ func _ready() -> void:
 
 
 func update_lives(lives: int):
+	if lives < 0:
+		return
 	var diff = lives - get_child_count()
 	for i in range(abs(diff)):
 		add_live() if diff > 0 else remove_live()
