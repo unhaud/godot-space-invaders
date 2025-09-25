@@ -12,8 +12,13 @@ config_version=5
 
 config/name="SpaceInvaders"
 run/main_scene="uid://df3bkegk2afy5"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Events="*res://core/events.gd"
+Globals="*res://core/globals.gd"
 
 [display]
 
@@ -23,6 +28,12 @@ window/size/window_width_override=1024
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
+
+[layer_names]
+
+2d_physics/layer_1="enviorment"
+2d_physics/layer_2="space_ship"
+2d_physics/layer_3="enemy"
 
 [rendering]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ksrsof1m4vof"]
 
-[ext_resource type="Script" uid="uid://dyn2hpventj3p" path="res://rocket.gd" id="1_e8x5b"]
+[ext_resource type="Script" uid="uid://dyn2hpventj3p" path="res://elements/rocket/rocket.gd" id="1_e8x5b"]
 [ext_resource type="Texture2D" uid="uid://c27xel6jnrdcp" path="res://assets/rocket.png" id="2_uj64q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j62tl"]
@@ -38,6 +38,8 @@ height = 12.0
 
 [node name="Rocket" type="CharacterBody2D"]
 top_level = true
+collision_layer = 0
+collision_mask = 4
 script = ExtResource("1_e8x5b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
