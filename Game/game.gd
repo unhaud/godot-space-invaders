@@ -13,3 +13,4 @@ func check_game_over():
 	var enemies =  get_tree().get_nodes_in_group("enemy")
 	if Globals.lives <= 0 or enemies.size() <= 1:
 		add_child(GAME_OVER_SCENE.instantiate())
+#Globals.lives = RESET
