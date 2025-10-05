@@ -7,7 +7,7 @@ const SPEED_BOOST := 2.5
 @onready var shot_timer := $ShotTimer
 
 var direction := Vector2.RIGHT
-var speed := 5.0
+var speed := 10.0
 
 func _process(delta: float):
 	global_position += direction * speed * delta
@@ -24,4 +24,5 @@ func change_direction():
 func _on_shot_timer_timeout() -> void:
 	var enemies = get_tree().get_nodes_in_group("enemy")
 	if enemies.size() > 0:
+		enemies.pick_random().shot()
 		enemies.pick_random().shot()

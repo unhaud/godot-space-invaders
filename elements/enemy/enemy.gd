@@ -18,3 +18,9 @@ func shot():
 	var bullet = BULLET_SCENE.instantiate()
 	bullet.global_position += global_position + Vector2(0, 10.0)
 	add_child(bullet)
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	remove_from_group("enemy")
+	Events.enemy_died.emit()
+	get_parent().queue_free()

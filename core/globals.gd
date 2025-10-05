@@ -1,6 +1,6 @@
 extends Node
 
-
+var max_lives := 3
 var points := 0 
 var lives := 3
 

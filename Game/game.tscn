@@ -21,10 +21,10 @@ region_enabled = true
 region_rect = Rect2(0, 0, 256, 240)
 
 [node name="SpaceShip" parent="." instance=ExtResource("2_7raqb")]
-position = Vector2(123, 209)
+position = Vector2(116, 201)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("4_fwxkx")]
-position = Vector2(20, 45)
+position = Vector2(21, 42)
 
 [node name="Wall" parent="." instance=ExtResource("3_jcm6v")]
 position = Vector2(-7, 0)

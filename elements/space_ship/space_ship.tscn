@@ -26,3 +26,6 @@ shape = SubResource("RectangleShape2D_f3f31")
 [node name="CollisionLWing" type="CollisionShape2D" parent="."]
 position = Vector2(-10, 3)
 shape = SubResource("RectangleShape2D_f3f31")
+
+[node name="TimerShot" type="Timer" parent="."]
+one_shot = true
